@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 import TransactionPage from "./pages/TransactionPage";
 import TransactionForm from "./components/TransactionForm";
 import Layout from "./components/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import ChartPage from "./pages/ChartPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,8 +23,16 @@ const router = createBrowserRouter([
         element: <TransactionPage />,
       },
       {
-        path: "/transactions/new",
+        path: "add",
         element: <TransactionForm />,
+      },
+      {
+        path: "edit/:id",
+        element: <TransactionForm />,
+      },
+      {
+        path: "chart",
+        element: <ChartPage />,
       },
     ],
   },

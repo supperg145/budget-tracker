@@ -35,7 +35,7 @@ const TransactionForm = () => {
                 <label>Type:</label>
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="income">Income</option>
-                    <option value="outcome">Outcome</option>
+                    <option value="expense">Expense</option>
                 </select>
             </div>
             <div>
