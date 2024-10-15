@@ -1,31 +1,54 @@
-.home-page{
-    background-image: url(../assets/background.webp);
-    background-size: cover;
-    background-position: center;
-    display:flex;
+.home-page {
+  background-image: url(../assets/background.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .content {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    gap: 16px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 24px 32px;
+    border-radius: 16px;
+    color: #fff;
+    max-width: 600px;
+    height: 350px;
+    border: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(
+      10px
+    ); // Blurs the background under the overlay for a glass-like effect
 
-    .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        text-align: center;
-        background-color: rgba(82, 82, 82, 0.5);
-        padding: 20px;
-        border-radius: 10px;
+    .buttons {
+      display: flex;
+      gap: 12px;
+
+      button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        background-color: #007bff;
         color: #fff;
-        max-width: 500px;
-        height: 300px;
-        border:  2px solid #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    .buttons{
-        display: flex;
-        gap: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: #0056b3;
+          transform: translateY(-2px); // Slight lift effect on hover
+        }
+
+        &:active {
+          transform: translateY(0); // Pressed button effect
+        }
+      }
     }
-}
+  }
 }

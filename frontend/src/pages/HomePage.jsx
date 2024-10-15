@@ -11,7 +11,9 @@ const HomePage = () => {
           <Button variant="primary" as={Link} to="/login">
             Login
           </Button>
-          <Button>Register</Button>
+          <Button variant="secondary" as={Link} to="/register">
+            Register
+          </Button>
         </div>
       </div>
     </div>

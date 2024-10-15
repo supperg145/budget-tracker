@@ -4,6 +4,9 @@ import "./index.scss";
 import App from "./App";
 import TransactionPage from "./pages/TransactionPage";
 import TransactionForm from "./components/TransactionForm";
+import AddTransaction from "./pages/AddTransaction";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 import Layout from "./components/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "add",
-        element: <TransactionForm />,
+        element: <AddTransaction />,
       },
       {
         path: "edit/:id",
@@ -34,6 +37,14 @@ const router = createBrowserRouter([
         path: "chart",
         element: <ChartPage />,
       },
+      {
+        path: "register",
+        element: <RegisterPage />
+      },
+      {
+        path: "login",
+        element: <LoginPage />
+      }
     ],
   },
 ]);

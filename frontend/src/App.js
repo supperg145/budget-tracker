@@ -1,11 +1,10 @@
 import "./App.scss";
 import React, { useState } from "react";
 import TransactionList from "./components/TransactionList";
-import TransactionForm from "./components/TransactionForm";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Header";
 import HomePage from "./pages/HomePage";
 import ChartPage from "./pages/ChartPage";
+import AddTransaction from "./pages/AddTransaction";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -24,11 +23,11 @@ function App() {
         />
         <Route
           path="/transactions/new"
-          element={<TransactionForm addTransaction={addTransaction} />}
+          element={<AddTransaction addTransaction={addTransaction} />}
         />
         <Route
           path="/transactions/edit/:id"
-          element={<TransactionForm addTransaction={addTransaction} />}
+          element={<AddTransaction addTransaction={addTransaction} />}
         />
         <Route
           path="/chart"
